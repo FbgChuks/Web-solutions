@@ -531,6 +531,275 @@
                 font-size: 2rem;
             }
         }
+
+
+        .write-review {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .review-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #f9f9f9;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .rating-stars {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .rating-stars i {
+        font-size: 1.8rem;
+        color: #ddd;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .rating-stars i.hover {
+        color: #ffd700;
+    }
+
+    .rating-stars i.active {
+        color: #ffd700;
+    }
+
+    .review-form .submit-btn {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        margin-top: 1rem;
+    }
+
+    .about {
+    padding: 100px 0;
+    background: white;
+    }
+
+    .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    }
+
+    .about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    }
+
+    .about-text h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    }
+
+    .about-text h3::after {
+    content: ‘’;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    }
+
+    .about-text p {
+    margin-bottom: 1.5rem;
+    }
+
+    .about-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-image::before {
+    content: ‘’;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    z-index: 1;
+    }
+
+    .about-placeholder {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    }
+
+    .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    }
+
+    .stat-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+    transform: translateY(-5px);
+    }
+
+    .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 500;
+    }
+
+    .timeline {
+    margin-top: 4rem;
+    position: relative;
+    }
+
+    .timeline::before {
+    content: ‘’;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    transform: translateX(-50%);
+    }
+
+    .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+    }
+
+    .timeline-content {
+    flex: 1;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 2rem;
+    position: relative;
+    }
+
+    .timeline-content::before {
+    content: ‘’;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    transform: translateY(-50%);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content::before {
+    right: -30px;
+    border-left-color: white;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content::before {
+    left: -30px;
+    border-right-color: white;
+    }
+
+    .timeline-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 1rem;
+    }
+
+    .timeline-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    }
+
+    .timeline-description {
+    color: #666;
+    line-height: 1.6;
+    }
+
+    .timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: #667eea;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px #667eea;
+    }
+
+    /* Responsive styles for About section */
+    @media (max-width: 768px) {
+    .about-content {
+    grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: row !important;
+    }
+
+    .timeline-item:nth-child(odd) {
+        flex-direction: row !important;
+    }
+
+    .timeline-content {
+        margin-left: 3rem;
+        margin-right: 0;
+    }
+
+    .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+        border-right-color: white !important;
+        border-left-color: transparent !important;
+    }
+
+    .timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+
+
+    }
     </style>
 </head>
 <body>
@@ -538,13 +807,14 @@
         <nav class="container">
             <a href="#" class="logo">
                 <div class="logo-icon">W</div>
-                <span class="logo-text">WEB SOLUTIONS</span>
+                <span class="logo-text">WEBSITE SOLUTIONS</span>
             </a>
             <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -558,11 +828,95 @@
             <div class="hero-content">
                 <h1>Premium Web Solutions</h1>
                 <p>We create stunning websites, powerful web applications, and provide comprehensive programming services that drive your business forward.</p>
-                <a href="#contact" class="cta-button">Get Started Today</a>
+                <a href="https://wa.me/+2348125932792" class="cta-button">Get Started Today</a>
             </div>
         </div>
     </section>
-
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About WEB SOLUTIONS</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Four years ago, WEB SOLUTIONS was born from a simple vision: to help businesses thrive in the digital world through exceptional web development and design. What started as a small team of passionate developers has grown into a trusted partner for over 80 clients across the globe.</p>
+                    
+                    <p>Our journey began in 2021 when our founder, driven by a passion for technology and a desire to make a difference, decided to turn years of programming experience into a mission-focused company. We started by helping local businesses in our community create their first websites, and quickly realized that our approach of combining technical expertise with genuine care for our clients' success was something special.</p>
+                    
+                    <p>Within our first year, we had completed 15 projects and received our first international client from Canada. This milestone showed us that quality work and dedication to client success knows no borders. Word of mouth became our strongest marketing tool as satisfied clients recommended us to their networks.</p>
+                    
+                    <p>By 2022, we had expanded our team to include specialized designers, backend developers, and project managers. This growth allowed us to take on more complex projects, including e-commerce platforms, custom web applications, and enterprise solutions. We completed over 25 projects that year, with clients spanning across Nigeria, the United States, Canada, Germany, and the United Kingdom.</p>
+                    
+                    <p>The year 2023 marked a significant turning point for us. We invested heavily in new technologies and team training, allowing us to offer cutting-edge solutions including mobile app development, cloud integration, and advanced security implementations. Our client base grew to over 60 companies, and we began working with larger enterprises and government agencies.</p>
+                    
+                    <p>Today, as we continue into 2024 and beyond, WEB SOLUTIONS has successfully delivered over 80 projects to clients worldwide. From small startups to established corporations, from simple brochure websites to complex web applications handling millions of transactions, we've proven that no project is too small or too big for our dedicated team.</p>
+                    
+                    <p>What sets us apart is our commitment to understanding each client's unique needs and delivering solutions that not only meet but exceed expectations. We believe that great web development is not just about writing code – it's about creating digital experiences that drive real business results.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        💻 WEB SOLUTIONS
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">80+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-title">The Beginning</div>
+                        <div class="timeline-description">WEB SOLUTIONS was founded with a vision to help businesses succeed online. Started with our first 5 local clients and delivered 15 successful projects by year-end.</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-title">International Expansion</div>
+                        <div class="timeline-description">Expanded our team and secured our first international clients from Canada and the UK. Completed over 25 projects and established our reputation for quality work.</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">Technology Innovation</div>
+                        <div class="timeline-description">Invested in new technologies and team training. Launched mobile app development services and cloud integration solutions. Reached 60+ completed projects.</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">Continued Growth</div>
+                        <div class="timeline-description">Achieved 80+ successful projects milestone. Expanded services to include AI integration and advanced security solutions. Serving clients across 15+ countries worldwide.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
@@ -611,6 +965,37 @@
         </div>
     </section>
 
+    <section class="write-review">
+        <div class="container">
+            <h2 class="section-title">Write a Review</h2>
+            <form id="reviewForm" class="review-form">
+                <div class="form-group">
+                    <label for="reviewer-name">Your Name</label>
+                    <input type="text" id="reviewer-name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-location">Your Location</label>
+                    <input type="text" id="reviewer-location" placeholder="City, Country" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="rating-stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" rows="5" placeholder="Share your experience with us..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
@@ -619,15 +1004,15 @@
                     <p>Ready to take your digital presence to the next level? Get in touch with us today and let's discuss how we can help your business grow.</p>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>info@websolutions.com</span>
+                        <span>cogbonna9991@gmail.com</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span>+1 (555) 123-4567</span>
+                        <span>+234 8125932792</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>123 Tech Street, Digital City</span>
+                        <span>Port City</span>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -651,7 +1036,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 WEB SOLUTIONS. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i> for your success</p>
+            <p>&copy; 2025 WEBSITE SOLUTIONS. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i> for your success</p>
         </div>
     </footer>
 
@@ -710,7 +1095,221 @@
                 avatar: "JW",
                 rating: 5,
                 text: "Professional, creative, and reliable. Web Solutions helped us launch our fintech platform with advanced security features. The user interface is intuitive and performs flawlessly."
+            },
+
+            {
+                name: "Ngozi Eze",
+                location: "Lagos, Nigeria",
+                avatar: "NE",
+                rating: 5,
+                text: "Web Solutions built our e-commerce platform and the results have been phenomenal. Our sales increased by 350% in just 3 months. Highly recommended for African businesses!"
+            },
+            {
+                name: "Kwame Asante",
+                location: "Accra, Ghana",
+                avatar: "KA",
+                rating: 5,
+                text: "The team understood our unique African market needs perfectly. Our educational platform now serves thousands of students across West Africa without any hiccups."
+            },
+            {
+                name: "Amina Mohamed",
+                location: "Nairobi, Kenya",
+                avatar: "AM",
+                rating: 5,
+                text: "As a startup founder, I was impressed by how Web Solutions optimized costs without compromising quality. Our mobile app works flawlessly even on low-end devices common in Africa."
+            },
+            {
+                name: "Thabo Mbeki",
+                location: "Johannesburg, South Africa",
+                avatar: "TM",
+                rating: 5,
+                text: "The banking portal they developed for us meets all South African regulatory requirements while providing a seamless user experience. Truly exceptional work."
+            },
+            {
+                name: "Fatoumata Diallo",
+                location: "Dakar, Senegal",
+                avatar: "FD",
+                rating: 5,
+                text: "Our agricultural marketplace connects rural farmers with urban buyers across Francophone Africa. Web Solutions implemented perfect multilingual support."
+            },
+            {
+                name: "Olumide Adebayo",
+                location: "Ibadan, Nigeria",
+                avatar: "OA",
+                rating: 5,
+                text: "The custom CRM system they built has transformed our real estate business. Property sales have doubled thanks to their innovative tracking features."
+            },
+            {
+                name: "Zahara Abdi",
+                location: "Mogadishu, Somalia",
+                avatar: "ZA",
+                rating: 5,
+                text: "Despite our challenging location, Web Solutions delivered a robust telemedicine platform that's helping improve healthcare access in Somalia."
+            },
+            {
+                name: "Kofi Mensah",
+                location: "Kumasi, Ghana",
+                avatar: "KM",
+                rating: 5,
+                text: "Our transportation booking system handles thousands of daily requests across Ghana. The system has been rock-solid since launch."
+            },
+            {
+                name: "Chinwe Okonkwo",
+                location: "Enugu, Nigeria",
+                avatar: "CO",
+                rating: 5,
+                text: "The school management system they developed has digitized our entire operation. Parents can now track everything from fees to exam results online."
+            },
+            {
+                name: "Mohamed El-Sayed",
+                location: "Cairo, Egypt",
+                avatar: "ME",
+                rating: 5,
+                text: "Web Solutions built our tourism portal showcasing Egypt's historical sites. Bookings have increased by 400% since launch."
+            },
+            {
+                name: "Grace Mwangi",
+                location: "Nakuru, Kenya",
+                avatar: "GM",
+                rating: 5,
+                text: "Our dairy cooperative's tracking system now connects farmers with processors across East Africa. Milk collection efficiency has improved by 60%."
+            },
+            {
+                name: "Ibrahim Toure",
+                location: "Bamako, Mali",
+                avatar: "IT",
+                rating: 5,
+                text: "The gold trading platform they developed has brought transparency to our market. Transactions that used to take days now happen in minutes."
+            },
+            {
+                name: "Lerato Moloi",
+                location: "Pretoria, South Africa",
+                avatar: "LM",
+                rating: 5,
+                text: "Our insurance claims processing system reduced approval times from weeks to hours. The impact on customer satisfaction has been tremendous."
+            },
+            {
+                name: "Yusuf Bello",
+                location: "Kano, Nigeria",
+                avatar: "YB",
+                rating: 5,
+                text: "The textile marketplace connects Northern Nigerian artisans with global buyers. Web Solutions implemented perfect payment solutions for our region."
+            },
+            {
+                name: "Aïchatou Diallo",
+                location: "Conakry, Guinea",
+                avatar: "AD",
+                rating: 5,
+                text: "Our mining company's inventory system now tracks equipment across multiple remote sites. The offline sync capability works perfectly in low-connectivity areas."
+            },
+            {
+                name: "Samuel Asare",
+                location: "Tamale, Ghana",
+                avatar: "SA",
+                rating: 5,
+                text: "The agricultural extension app they developed delivers farming advice in local languages. Over 50,000 farmers are now using it regularly."
+            },
+            {
+                name: "Nadia Kamau",
+                location: "Mombasa, Kenya",
+                avatar: "NK",
+                rating: 5,
+                text: "Our port logistics system handles thousands of shipping containers daily. Web Solutions implemented perfect integration with government systems."
+            },
+            {
+                name: "Oluwaseun Adeyemi",
+                location: "Abeokuta, Nigeria",
+                avatar: "OA",
+                rating: 5,
+                text: "The custom bakery management system tracks everything from ingredients to deliveries. Our waste has reduced by 30% thanks to their smart analytics."
+            },
+            {
+                name: "Fatima Zahra",
+                location: "Casablanca, Morocco",
+                avatar: "FZ",
+                rating: 5,
+                text: "Our fashion e-commerce platform showcases Moroccan designs to the world. The multi-currency implementation works perfectly for international sales."
+            },
+            {
+                name: "Tendai Chikomo",
+                location: "Harare, Zimbabwe",
+                avatar: "TC",
+                rating: 5,
+                text: "Despite economic challenges, Web Solutions delivered a perfect solution for our financial services that works even during power outages."
+
+            // Global reviews (10)
+            },
+            {
+                name: "Carlos Mendoza",
+                location: "Buenos Aires, Argentina",
+                avatar: "CM",
+                rating: 5,
+                text: "The Spanish version of our website is flawless. Web Solutions' attention to cultural nuances in translation was impressive."
+            },
+            {
+                name: "Sophie Laurent",
+                location: "Paris, France",
+                avatar: "SL",
+                rating: 5,
+                text: "Our luxury brand's website reflects exactly the premium experience we wanted. The image loading animations are particularly stunning."
+            },
+            {
+                name: "Raj Patel",
+                location: "Mumbai, India",
+                avatar: "RP",
+                rating: 5,
+                text: "The scalable architecture they designed handles our festival season traffic spikes without breaking a sweat. Perfect for our e-commerce business."
+            },
+            {
+                name: "Emma Johansson",
+                location: "Stockholm, Sweden",
+                avatar: "EJ",
+                rating: 5,
+                text: "Our climate tech startup's dashboard visualizes complex environmental data beautifully. The team understood our sustainability mission completely."
+            },
+            {
+                name: "Luca Bianchi",
+                location: "Milan, Italy",
+                avatar: "LB",
+                rating: 5,
+                text: "The food delivery app they developed for our restaurant chain has increased orders by 200%. The UX is perfect for our older customers too."
+            },
+            {
+                name: "Yuki Tanaka",
+                location: "Tokyo, Japan",
+                avatar: "YT",
+                rating: 5,
+                text: "Implementing our complex inventory management system with barcode scanning was challenging, but Web Solutions delivered beyond expectations."
+            },
+            {
+                name: "Alejandro Ruiz",
+                location: "Mexico City, Mexico",
+                avatar: "AR",
+                rating: 5,
+                text: "Our Spanish-language podcast platform handles millions of monthly listeners. The audio streaming quality is consistently excellent."
+            },
+            {
+                name: "Ananya Desai",
+                location: "Bangalore, India",
+                avatar: "AD",
+                rating: 5,
+                text: "The AI-powered features they implemented in our HR platform have reduced screening time by 80% while improving candidate quality."
+            },
+            {
+                name: "Omar Khalid",
+                location: "Dubai, UAE",
+                avatar: "OK",
+                rating: 5,
+                text: "Our property portal handles listings across the Middle East. The map integration with Arabic support is particularly well-implemented."
+            },
+            {
+                name: "Elena Petrova",
+                location: "Moscow, Russia",
+                avatar: "EP",
+                rating: 5,
+                text: "The cybersecurity measures implemented in our financial platform give us complete confidence. Regular penetration tests show no vulnerabilities."
             }
+
         ];
 
         // Review rotation functionality
@@ -829,6 +1428,79 @@
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
             }
         });
+
+
+         // Star rating functionality
+    const stars = document.querySelectorAll('.rating-stars i');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            selectedRating = parseInt(star.getAttribute('data-rating'));
+            stars.forEach((s, index) => {
+                if (index < selectedRating) {
+                    s.classList.add('active');
+                    s.classList.remove('far');
+                    s.classList.add('fas');
+                } else {
+                    s.classList.remove('active');
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                }
+            });
+        });
+
+        star.addEventListener('mouseover', () => {
+            const rating = parseInt(star.getAttribute('data-rating'));
+            stars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.add('hover');
+                    s.classList.remove('far');
+                    s.classList.add('fas');
+                } else {
+                    s.classList.remove('hover');
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                }
+            });
+        });
+
+        star.addEventListener('mouseout', () => {
+            stars.forEach(s => {
+                s.classList.remove('hover');
+                if (!s.classList.contains('active')) {
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                }
+            });
+        });
+    });
+
+    // Review form submission
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (selectedRating === 0) {
+            alert('Please select a rating');
+            return;
+        }
+
+        const name = document.getElementById('reviewer-name').value;
+        const location = document.getElementById('reviewer-location').value;
+        const text = document.getElementById('review-text').value;
+
+        // In a real application, you would send this data to your server
+        // For this demo, we'll just show a success message
+        alert('Thank you for your review!');
+        this.reset();
+        
+        // Reset stars
+        stars.forEach(star => {
+            star.classList.remove('active', 'fas');
+            star.classList.add('far');
+        });
+        selectedRating = 0;
+    });
     </script>
 </body>
 </html>
