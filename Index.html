@@ -828,7 +828,7 @@
             <div class="hero-content">
                 <h1>Premium Web Solutions</h1>
                 <p>We create stunning websites, powerful web applications, and provide comprehensive programming services that drive your business forward.</p>
-                <a href="https://api.whatsapp.com/send?phone=2348125932792" class="cta-button">Get Started Today</a>
+                <a href="https://wa.me/2348125932792" class="cta-button" target="_blank">Get Started Today</a>
             </div>
         </div>
     </section>
@@ -1511,6 +1511,11 @@
             star.classList.add('far');
         });
         selectedRating = 0;
+    });
+
+        // If this exists, remove or modify it
+    document.querySelector('.cta-button').addEventListener('click', function(e) {
+        e.preventDefault(); // ← Remove this if blocking the link
     });
     </script>
 </body>
